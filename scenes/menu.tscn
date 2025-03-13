@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://btv0c6y5u1bbi"]
+
+[ext_resource type="Script" uid="uid://cwqwqv5gvb6x6" path="res://scripts/root/ui/server_ui_container.gd" id="1_yqeox"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4h3mk"]
+font_size = 6
+
+[node name="Menu" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameTitle" type="Label" parent="."]
+layout_mode = 2
+text = "el wiwi rancher"
+horizontal_alignment = 1
+
+[node name="ServerUIContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+script = ExtResource("1_yqeox")
+
+[node name="HostButton" type="Button" parent="ServerUIContainer"]
+layout_mode = 2
+text = "Host Game"
+
+[node name="ServerAddressLineEdit" type="LineEdit" parent="ServerUIContainer"]
+layout_mode = 2
+text = "127.0.0.1:5999"
+placeholder_text = "Server Address. . ."
+
+[node name="JoinButton" type="Button" parent="ServerUIContainer"]
+layout_mode = 2
+text = "Join Game"
+
+[node name="Hello" type="Label" parent="."]
+layout_mode = 2
+text = "(I'll make it look good later trust)"
+label_settings = SubResource("LabelSettings_4h3mk")
+horizontal_alignment = 1

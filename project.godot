@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="el wiwi rancher"
+config/version="1.0.0-alpha.1"
+run/main_scene="uid://btv0c6y5u1bbi"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="viewport"
+
+[layer_names]
+
+3d_physics/layer_1="Environment"
+3d_physics/layer_2="Entities (Friendly)"
+3d_physics/layer_3="Entities (Hostile)"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+occlusion_culling/bvh_build_quality=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+shading/overrides/force_vertex_shading=true
+shading/overrides/force_lambert_over_burley=true
+occlusion_culling/occlusion_rays_per_thread=256
+occlusion_culling/use_occlusion_culling=true
