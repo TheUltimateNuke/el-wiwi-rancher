@@ -15,7 +15,7 @@ func _on_ip_submit(_new_text: String):
     join_button.pressed.emit()
 
 func _on_host_pressed(): 
-    pass # host using online_sys.gd
+    OnlineMPSys.host_server()
 
 func _on_join_pressed():
-    pass # join using online_sys.gd with ip_line_edit
+    OnlineMPSys.join_server(ip, port)

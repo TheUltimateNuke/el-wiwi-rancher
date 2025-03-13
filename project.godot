@@ -16,6 +16,10 @@ run/main_scene="uid://btv0c6y5u1bbi"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+OnlineMPSys="*res://scripts/autoload/multiplayer/online_mp_sys.gd"
+
 [display]
 
 window/size/viewport_width=320
