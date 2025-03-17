@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://kekn7xo6o0hs"]
+[gd_scene load_steps=3 format=3 uid="uid://kekn7xo6o0hs"]
+
+[ext_resource type="Script" uid="uid://orkalj3cy7nd" path="res://scripts/root/entities/player/player_spawn.gd" id="1_nnsk1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nnsk1"]
+size = Vector3(2, 1, 2)
 
 [node name="World" type="Node3D"]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://cc1m2a1obsyn4")
+spawn_path = NodePath("..")
+
+[node name="PlayerSpawn" type="Node3D" parent="."]
+script = ExtResource("1_nnsk1")
+metadata/_custom_type_script = "uid://orkalj3cy7nd"
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_nnsk1")
